@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :music_fans, except: [:new, :edit]
+  resources :events, except: [:new, :edit]
   resources :music_fans, except: [:new, :edit]
   resources :examples, except: [:new, :edit]
   post '/sign-up' => 'users#signup'
