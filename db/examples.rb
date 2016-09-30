@@ -16,3 +16,30 @@
 #                password: 'abc123',
 #                password_confirmation: nil)
 # end
+
+# MusicFan.create([
+#                 { given_name: 'Sketchy',
+#                   surname: 'McTourRat',
+#                   date_of_birth: '2000-01-24'
+#                   email: iamuseless@gmail.com },
+#                 { given_name: 'Unemployed',
+#                   surname: 'Wookie',
+#                   date_of_birth: '1976-05-30'
+#                   email: wookie@gmail.com },
+#                 { given_name: 'Unemployed',
+#                   surname: 'Wookie',
+#                   date_of_birth: '1976-05-30'
+#                   email: wookie@gmail.com },
+#                 { given_name: 'Chad',
+#                   surname: 'Trustafarian',
+#                   date_of_birth: '1980-08-02'
+#                   email: trustfundsrock@gmail.com },
+#                 { given_name: 'Robbe',
+#                   surname: 'Smith',
+#                   date_of_birth: '1976-05-16'
+#                   email: robbe.smith@gmail.com },
+#                 { given_name: 'Tucker',
+#                   surname: 'Smith',
+#                   date_of_birth: '2005-09-15'
+#                   email: tuckersmith05@gmail.com }
+#               ])
