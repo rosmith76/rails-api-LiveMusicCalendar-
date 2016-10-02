@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   include Authentication
   has_many :examples
-  has_one :music_fan
+  has_many :attendees
+  has_many :events, through: :attendees
 end
