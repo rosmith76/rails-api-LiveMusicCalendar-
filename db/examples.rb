@@ -17,26 +17,29 @@
 #                password_confirmation: nil)
 # end
 
-MusicFan.create([
-                { given_name: 'Sketchy',
-                  surname: 'McTourRat',
-                  date_of_birth: '2000-01-24' },
-                { given_name: 'Unemployed',
-                  surname: 'Wookie',
-                  date_of_birth: '1976-05-30' },
-                { given_name: 'Token',
-                  surname: 'OldGuy',
-                  date_of_birth: '1956-05-30' },
-                { given_name: 'Chad',
-                  surname: 'Trustafarian',
-                  date_of_birth: '1980-08-02' },
-                { given_name: 'Robbe',
-                  surname: 'Smith',
-                  date_of_birth: '1976-05-16' },
-                { given_name: 'Tucker',
-                  surname: 'Smith',
-                  date_of_birth: '2005-09-15' }
-                ])
+# User.create([
+#                 { given_name: 'Sketchy',
+#                   surname: 'McTourRat',
+#                   date_of_birth: '2000-01-24'
+#                   email: "sketchy@smith.com"
+#                   password: '123'
+#                   password_confirmation: '123' },
+#                 { given_name: 'Unemployed',
+#                   surname: 'Wookie',
+#                   date_of_birth: '1976-05-30' },
+#                 { given_name: 'Token',
+#                   surname: 'OldGuy',
+#                   date_of_birth: '1956-05-30' },
+#                 { given_name: 'Chad',
+#                   surname: 'Trustafarian',
+#                   date_of_birth: '1980-08-02' },
+#                 { given_name: 'Robbe',
+#                   surname: 'Smith',
+#                   date_of_birth: '1976-05-16' },
+#                 { given_name: 'Tucker',
+#                   surname: 'Smith',
+#                   date_of_birth: '2005-09-15' }
+#                 ])
 
 Event.create([
                 { band: 'Phish',
@@ -49,12 +52,12 @@ Event.create([
                   venue: 'The Sinclair Kitchen',
                   date: '2016-10-10' },
                 { band: 'Yonder Mountain String Band',
-                  venue: 'The Sinclair Kitchen',
-                  date: '2016-10-20' },
+                  venue: 'Paradise Rock Club',
+                  date: '2016-10-21' },
                 { band: 'moe.',
                   venue: 'Orpheum Theater',
                   date: '2016-10-31' },
                 { band: 'Drive By Truckers',
-                  venue: 'The Paradise',
+                  venue: 'Paradise Rock Club',
                   date: '2016-10-28' }
                 ])
