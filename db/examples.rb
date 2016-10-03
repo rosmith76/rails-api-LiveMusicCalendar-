@@ -17,29 +17,38 @@
 #                password_confirmation: nil)
 # end
 
-# User.create([
-#                 { given_name: 'Sketchy',
-#                   surname: 'McTourRat',
-#                   date_of_birth: '2000-01-24'
-#                   email: "sketchy@smith.com"
-#                   password: '123'
-#                   password_confirmation: '123' },
-#                 { given_name: 'Unemployed',
-#                   surname: 'Wookie',
-#                   date_of_birth: '1976-05-30' },
-#                 { given_name: 'Token',
-#                   surname: 'OldGuy',
-#                   date_of_birth: '1956-05-30' },
-#                 { given_name: 'Chad',
-#                   surname: 'Trustafarian',
-#                   date_of_birth: '1980-08-02' },
-#                 { given_name: 'Robbe',
-#                   surname: 'Smith',
-#                   date_of_birth: '1976-05-16' },
-#                 { given_name: 'Tucker',
-#                   surname: 'Smith',
-#                   date_of_birth: '2005-09-15' }
-#                 ])
+User.create([
+                { given_name: 'Sketchy',
+                  surname: 'McTourRat',
+                  email: "sketchy@smith.com",
+                  password: '123',
+                  password_confirmation: '123' },
+                { given_name: 'Unemployed',
+                  surname: 'Wookie',
+                  email: "wookie@smith.com",
+                  password: '123',
+                  password_confirmation: '123' },
+                { given_name: 'Crabby',
+                  surname: 'OldGuy',
+                  email: "crabby@smith.com",
+                  password: '123',
+                  password_confirmation: '123' },
+                { given_name: 'Chad',
+                  surname: 'Trustafarian',
+                  email: "custie@smith.com",
+                  password: '123',
+                  password_confirmation: '123' },
+                { given_name: 'Robbe',
+                  surname: 'Smith',
+                  email: "robbe@smith.com",
+                  password: '123',
+                  password_confirmation: '123' },
+                { given_name: 'Tucker',
+                  surname: 'Smith',
+                  email: "tucker@smith.com",
+                  password: '123',
+                  password_confirmation: '123' }
+                ])
 
 Event.create([
                 { band: 'Phish',

@@ -42,6 +42,7 @@ module RailsApiLiveMusicCalendar
     config.middleware.use Rack::Cors do
       allow do
         origins ENV['CLIENT_ORIGIN'] || 'http://localhost:8080'
+        # rosmith76.github.io/
         resource '*',
                  headers: :any,
                  methods: [:options, :get,

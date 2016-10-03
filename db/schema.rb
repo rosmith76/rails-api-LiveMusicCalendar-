@@ -11,20 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002193814) do
+ActiveRecord::Schema.define(version: 20161003194730) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "attendees", force: :cascade do |t|
-    t.integer  "event_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id"
-  end
-
-  add_index "attendees", ["event_id"], name: "index_attendees_on_event_id", using: :btree
-  add_index "attendees", ["user_id"], name: "index_attendees_on_user_id", using: :btree
 
   create_table "events", force: :cascade do |t|
     t.string   "band"
@@ -32,7 +22,11 @@ ActiveRecord::Schema.define(version: 20161002193814) do
     t.string   "venue"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.string   "setlist"
   end
+
+  add_index "events", ["user_id"], name: "index_events_on_user_id", using: :btree
 
   create_table "examples", force: :cascade do |t|
     t.text     "text",       null: false
@@ -43,13 +37,6 @@ ActiveRecord::Schema.define(version: 20161002193814) do
 
   add_index "examples", ["user_id"], name: "index_examples_on_user_id", using: :btree
 
-  create_table "music_fans", force: :cascade do |t|
-    t.string "given_name"
-    t.string "surname"
-    t.date   "date_of_birth"
-    t.string "email"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "email",           null: false
     t.string   "token",           null: false
@@ -58,13 +45,11 @@ ActiveRecord::Schema.define(version: 20161002193814) do
     t.datetime "updated_at",      null: false
     t.string   "given_name"
     t.string   "surname"
-    t.date     "date_of_birth"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["token"], name: "index_users_on_token", unique: true, using: :btree
 
-  add_foreign_key "attendees", "events"
-  add_foreign_key "attendees", "users"
+  add_foreign_key "events", "users"
   add_foreign_key "examples", "users"
 end
