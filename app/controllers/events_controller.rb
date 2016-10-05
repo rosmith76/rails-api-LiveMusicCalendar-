@@ -54,6 +54,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:band, :date, :venue, :setlist)
+    params.require(:event).permit(:band, :venue, :date, :setlist)
   end
 end
