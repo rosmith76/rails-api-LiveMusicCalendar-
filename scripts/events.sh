@@ -2,9 +2,10 @@ curl --include --request POST http://localhost:3000/events \
   --header "Content-Type: application/json" \
   --data '{
     "event": {
-      "band": "Everyone Orchestra",
-      "date": "2016-11-11",
-      "venue": "Thunder Road"
+      "band": "Your favorite band really sucks",
+      "date": "2016-11-09",
+      "venue": "Thunder Road",
+      "setlist": "lots of songs"
     }
   }'
 
