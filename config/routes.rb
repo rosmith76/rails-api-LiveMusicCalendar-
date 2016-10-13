@@ -5,8 +5,5 @@ Rails.application.routes.draw do
   post '/sign-in' => 'users#signin'
   delete '/sign-out/:id' => 'users#signout'
   patch '/change-password/:id' => 'users#changepw'
-  post '/events/:id' => 'events#create'
-  delete '/events/:id' => 'events#delete'
-  get '/events/:id' => 'events#index'
   resources :users, only: [:index, :show]
 end

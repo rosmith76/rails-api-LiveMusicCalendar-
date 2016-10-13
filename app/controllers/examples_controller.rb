@@ -1,4 +1,8 @@
+# class ExamplesController < ApplicationController  no protection
+# class ExamplesController < ProtectedController everything is locked down and
+# you can use current user
 class ExamplesController < OpenReadController
+  # doesn't care until after index and show
   before_action :set_example, only: [:update, :destroy]
 
   # GET /examples
