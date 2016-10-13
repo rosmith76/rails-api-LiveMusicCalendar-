@@ -1,11 +1,11 @@
-class EventsController < ApplicationController
+# class EventsController < ApplicationController
+class EventsController < ProtectedController
   before_action :set_event, only: [:show, :update, :destroy]
 
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
-
+    @events = Event.where("user_id=#{current_user.id}")
     render json: @events
   end
 
@@ -18,7 +18,8 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(event_params)
+    # @event = Event.new(event_params)
+    @event = current_user.events.build(event_params)
 
     if @event.save
       render json: @event, status: :created, location: @event
@@ -30,8 +31,6 @@ class EventsController < ApplicationController
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update
-    @event = Event.find(params[:id])
-
     if @event.update(event_params)
       head :no_content
     else
@@ -50,7 +49,8 @@ class EventsController < ApplicationController
   private
 
   def set_event
-    @event = Event.find(params[:id])
+    # @event = Event.find(params[:id])
+    @event = current_user.events.find(params[:id])
   end
 
   def event_params
