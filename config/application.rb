@@ -41,7 +41,7 @@ module RailsApiLiveMusicCalendar
     # Cross-Origin Resource Sharing
     config.middleware.use Rack::Cors do
       allow do
-        origins ENV['CLIENT_ORIGIN'] || 'https://rosmith76.github.io/'
+        origins ENV['CLIENT_ORIGIN'] || 'https://rosmith76.github.io/browser-LiveMusicCalendar/'
         # rosmith76.github.io/
         resource '*',
                  headers: :any,
